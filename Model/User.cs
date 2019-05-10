@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class User
+    public class User
     {
         string username;
         string password;
+        bool isadmin;
         /// <summary>
         /// 用户名
         /// </summary>
@@ -25,6 +26,14 @@ namespace Model
         {
             get { return password; }
             set { password = value; }
+        }
+        /// <summary>
+        /// 是否是管理员
+        /// </summary>
+        public bool IsAdmin
+        {
+            get { return isadmin; }
+            set { isadmin = value; }
         }
     }
 }
