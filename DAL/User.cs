@@ -11,6 +11,11 @@ namespace DAL
 {
     public class User
     {
+        /// <summary>
+        /// 根据用户名密码登录
+        /// </summary>
+        /// <param name="userinfo"></param>
+        /// <returns>用户信息表</returns>
         public DataSet Userlogin(Model.User userinfo)
         {
             SqlParameter[] parameters = {

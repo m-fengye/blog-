@@ -21,6 +21,17 @@ namespace fengye
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             Model.User userinfo = new Model.User();
+            if (txtUserName.Text == "")
+            {
+                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "js", "initMessagebox('请输入账号');", true);
+                return;
+            }
+            if (txtPassword.Text == "")
+            {
+                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "js", "initMessagebox('请输入密码');", true);
+                return;
+            }
+            
             userinfo.Username = txtUserName.Text;
             userinfo.Password = txtPassword.Text;
             DataSet ds;

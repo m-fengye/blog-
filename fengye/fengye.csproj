@@ -70,6 +70,8 @@
     <Content Include="App_Data\fengyeDB_log.LDF">
       <DependentUpon>fengyeDB.mdf</DependentUpon>
     </Content>
+    <Content Include="BlogContent.aspx" />
+    <Content Include="css\append.css" />
     <Content Include="css\login.css" />
     <Content Include="Global.asax" />
     <Content Include="index.aspx" />
@@ -153,6 +155,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlogContent.aspx.cs">
+      <DependentUpon>BlogContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogContent.aspx.designer.cs">
+      <DependentUpon>BlogContent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

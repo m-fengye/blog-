@@ -24,7 +24,7 @@
     width:500px;
     height:300px;
     margin:8% auto 0  auto;
-    background:rgba(200, 200, 200, 0.9);
+    background:rgba(32, 178, 170, 0.7);
     border-radius:20px 0px 20px 0px;
     text-align:center;
 }
@@ -33,13 +33,26 @@
     height:40px;
     background-color:#f66;
     position:absolute;
-    left:0;
+    margin-left:-100px;
+    left:50%;
+    /*left:0;
     right:0;
     top:0;
     bottom:0;
-    margin:10px auto;
+    margin:10px auto;*/
     display:none;
     z-index:999;
     text-align:center;
     line-height:40px;
+}
+#welcomeTitle{
+    font-size:1.5em;
+    background-image:-webkit-linear-gradient(left,#833ab4,#fd1d1d,#fcb045); 
+    -webkit-background-clip:text; 
+    -webkit-text-fill-color:transparent; 
+}
+.logintable{
+    width:400px;
+    height:200px;
+    margin:0 auto;
 }

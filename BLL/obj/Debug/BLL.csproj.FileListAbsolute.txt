@@ -1,0 +1,9 @@
+E:\Project\ASP.NET\fengye\BLL\bin\Debug\BLL.dll
+E:\Project\ASP.NET\fengye\BLL\bin\Debug\BLL.pdb
+E:\Project\ASP.NET\fengye\BLL\bin\Debug\DAL.dll
+E:\Project\ASP.NET\fengye\BLL\bin\Debug\Model.dll
+E:\Project\ASP.NET\fengye\BLL\bin\Debug\DAL.pdb
+E:\Project\ASP.NET\fengye\BLL\bin\Debug\Model.pdb
+E:\Project\ASP.NET\fengye\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\Project\ASP.NET\fengye\BLL\obj\Debug\BLL.dll
+E:\Project\ASP.NET\fengye\BLL\obj\Debug\BLL.pdb

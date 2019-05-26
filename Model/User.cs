@@ -8,9 +8,18 @@ namespace Model
 {
     public class User
     {
+        int id;
         string username;
         string password;
         bool isadmin;
+        /// <summary>
+        /// 主键ID
+        /// </summary>
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         /// <summary>
         /// 用户名
         /// </summary>

@@ -4,51 +4,73 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FengYe-Login</title>
     <link href="css/login.css" rel="stylesheet" />
 </head>
 <body onload="changeBackground();">
-    <%-- 网页背景 --%>
+    <!-- 网页背景 -->
     <div id="bg">
-        <div id="bg1" class="bgdiv" style="background-image:url(../img/tm-img-01.jpg);"></div>
-        <div id="bg2" class="bgdiv" style="background-image:url(../img/tm-img-02.jpg);"></div>
-        <div id="bg3" class="bgdiv" style="background-image:url(../img/tm-img-03.jpg);"></div>
-        <div id="bg4" class="bgdiv" style="background-image:url(../img/tm-img-04.jpg);"></div>
-        <div id="bg5" class="bgdiv" style="background-image:url(../img/tm-img-05.jpg);"></div>
-        <div id="bg6" class="bgdiv" style="background-image:url(../img/tm-img-06.jpg);"></div>
-        <div id="bg7" class="bgdiv" style="background-image:url(../img/tm-img-07.jpg);"></div>
-        <div id="bg8" class="bgdiv" style="background-image:url(../img/tm-img-08.jpg);"></div>
-        <div id="bg9" class="bgdiv" style="background-image:url(../img/tm-img-09.jpg);"></div>
-        <div id="bg10" class="bgdiv" style="background-image:url(../img/tm-img-10.jpg);"></div>
-        <div id="bg11" class="bgdiv" style="background-image:url(../img/tm-img-11.jpg);"></div>
-        <div id="bg12" class="bgdiv" style="background-image:url(../img/tm-img-12.jpg);"></div>
-        <div id="bg13" class="bgdiv" style="background-image:url(../img/tm-img-13.jpg);"></div>
-        <div id="bg14" class="bgdiv" style="background-image:url(../img/tm-img-14.jpg);"></div>
-        <div id="bg15" class="bgdiv" style="background-image:url(../img/tm-img-15.jpg);"></div>
-        <div id="bg16" class="bgdiv" style="background-image:url(../img/tm-img-16.jpg);"></div>
+        <div id="bg1" class="bgdiv" style="background-image: url(../img/tm-img-01.jpg);"></div>
+        <div id="bg2" class="bgdiv" style="background-image: url(../img/tm-img-02.jpg);"></div>
+        <div id="bg3" class="bgdiv" style="background-image: url(../img/tm-img-03.jpg);"></div>
+        <div id="bg4" class="bgdiv" style="background-image: url(../img/tm-img-04.jpg);"></div>
+        <div id="bg5" class="bgdiv" style="background-image: url(../img/tm-img-05.jpg);"></div>
+        <div id="bg6" class="bgdiv" style="background-image: url(../img/tm-img-06.jpg);"></div>
+        <div id="bg7" class="bgdiv" style="background-image: url(../img/tm-img-07.jpg);"></div>
+        <div id="bg8" class="bgdiv" style="background-image: url(../img/tm-img-08.jpg);"></div>
+        <div id="bg9" class="bgdiv" style="background-image: url(../img/tm-img-09.jpg);"></div>
+        <div id="bg10" class="bgdiv" style="background-image: url(../img/tm-img-10.jpg);"></div>
+        <div id="bg11" class="bgdiv" style="background-image: url(../img/tm-img-11.jpg);"></div>
+        <div id="bg12" class="bgdiv" style="background-image: url(../img/tm-img-12.jpg);"></div>
+        <div id="bg13" class="bgdiv" style="background-image: url(../img/tm-img-13.jpg);"></div>
+        <div id="bg14" class="bgdiv" style="background-image: url(../img/tm-img-14.jpg);"></div>
+        <div id="bg15" class="bgdiv" style="background-image: url(../img/tm-img-15.jpg);"></div>
+        <div id="bg16" class="bgdiv" style="background-image: url(../img/tm-img-16.jpg);"></div>
     </div>
-    <%-- 信息框 --%>
+    <!-- 信息框 -->
     <div id="messagebox"></div>
-    
-
+    <!-- 登录控件 -->
     <form id="loginbg" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
                 <div id="logindiv">
-                    账号：<asp:TextBox ID="txtUserName" runat="server"></asp:TextBox></br>
-                    密码：<asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox></br>
-                    <asp:CheckBox ID="chkRememberMe" runat="server" Checked="True" />记住我
-                    <asp:Button ID="btnLogin" runat="server" Text="登录" OnClick="btnLogin_Click" />
+                    <table class="logintable">
+                        <tr>
+                            <td colspan="3">
+                                <p id="welcomeTitle">
+                                    Welcome to Fengye Blog
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UserName：</td>
+                            <td colspan="2">
+                                <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>Password：</td>
+                            <td colspan="2">
+                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <asp:CheckBox ID="chkRememberMe" runat="server" Checked="True" />记住我&emsp;&emsp;&emsp;</td>
+                            <td>
+                                <asp:Button ID="btnLogin" runat="server" Text="登录" OnClick="btnLogin_Click" /></td>
+                        </tr>
+                    </table>
+
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>
     </form>
 
 
-    
-    
+
+
 
 
     <!--Load Jquery-->
@@ -68,7 +90,7 @@
             $("#bg" + String((n % divcount) + 1)).css("z-index", "-2");
             $("#bg" + String((n % divcount) + 1)).css("display", "block");
             //下一张作为底图
-            $("#bg" + String(((n+1) % divcount) + 1)).css("z-index", "-3");
+            $("#bg" + String(((n + 1) % divcount) + 1)).css("z-index", "-3");
         }
 
         /*提示信息框动态效果*/
