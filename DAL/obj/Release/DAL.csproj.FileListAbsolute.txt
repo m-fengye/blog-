@@ -1,0 +1,7 @@
+E:\Project\ASP.NET\fengye\DAL\bin\Release\DAL.dll
+E:\Project\ASP.NET\fengye\DAL\bin\Release\DAL.pdb
+E:\Project\ASP.NET\fengye\DAL\bin\Release\Model.dll
+E:\Project\ASP.NET\fengye\DAL\bin\Release\Model.pdb
+E:\Project\ASP.NET\fengye\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+E:\Project\ASP.NET\fengye\DAL\obj\Release\DAL.dll
+E:\Project\ASP.NET\fengye\DAL\obj\Release\DAL.pdb

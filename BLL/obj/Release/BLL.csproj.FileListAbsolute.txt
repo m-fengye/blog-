@@ -1,0 +1,9 @@
+E:\Project\ASP.NET\fengye\BLL\bin\Release\BLL.dll
+E:\Project\ASP.NET\fengye\BLL\bin\Release\BLL.pdb
+E:\Project\ASP.NET\fengye\BLL\bin\Release\DAL.dll
+E:\Project\ASP.NET\fengye\BLL\bin\Release\Model.dll
+E:\Project\ASP.NET\fengye\BLL\bin\Release\DAL.pdb
+E:\Project\ASP.NET\fengye\BLL\bin\Release\Model.pdb
+E:\Project\ASP.NET\fengye\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+E:\Project\ASP.NET\fengye\BLL\obj\Release\BLL.dll
+E:\Project\ASP.NET\fengye\BLL\obj\Release\BLL.pdb
