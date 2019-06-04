@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,6 +43,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -48,41 +51,598 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>backstage\ueditorUTF8\net\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\fengyeDB.mdf" />
     <Content Include="App_Data\fengyeDB_log.LDF">
       <DependentUpon>fengyeDB.mdf</DependentUpon>
     </Content>
-    <Content Include="BlogContent.aspx" />
-    <Content Include="css\append.css" />
-    <Content Include="css\login.css" />
+    <Content Include="backstage\assets\css\lib\barRating\barRating.css" />
+    <Content Include="backstage\assets\css\lib\bootstrap.min.css" />
+    <Content Include="backstage\assets\css\lib\calendar2\pignose.calendar.min.css" />
+    <Content Include="backstage\assets\css\lib\calendar2\semantic.ui.min.css" />
+    <Content Include="backstage\assets\css\lib\calendar\fullcalendar.css" />
+    <Content Include="backstage\assets\css\lib\data-table\buttons.bootstrap.min.css" />
+    <Content Include="backstage\assets\css\lib\data-table\buttons.dataTables.min.css" />
+    <Content Include="backstage\assets\css\lib\data-table\dataTables.bootstrap.min.css" />
+    <Content Include="backstage\assets\css\lib\font-awesome.min.css" />
+    <Content Include="backstage\assets\css\lib\jquery-ui.min.css" />
+    <Content Include="backstage\assets\css\lib\jsgrid\jsgrid-theme.min.css" />
+    <Content Include="backstage\assets\css\lib\jsgrid\jsgrid.min.css" />
+    <Content Include="backstage\assets\css\lib\lobi-panel\lobipanel.min.css" />
+    <Content Include="backstage\assets\css\lib\mmc-chat.css" />
+    <Content Include="backstage\assets\css\lib\nestable\nestable.css" />
+    <Content Include="backstage\assets\css\lib\nixon.css" />
+    <Content Include="backstage\assets\css\lib\owl.carousel.min.css" />
+    <Content Include="backstage\assets\css\lib\owl.theme.default.min.css" />
+    <Content Include="backstage\assets\css\lib\rangSlider\ion.rangeSlider.css" />
+    <Content Include="backstage\assets\css\lib\rangSlider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="backstage\assets\css\lib\rangSlider\ion.rangeSlider.skinHTML5.css" />
+    <Content Include="backstage\assets\css\lib\rangSlider\ion.rangeSlider.skinModern.css" />
+    <Content Include="backstage\assets\css\lib\rangSlider\ion.rangeSlider.skinNice.css" />
+    <Content Include="backstage\assets\css\lib\rangSlider\ion.rangeSlider.skinSimple.css" />
+    <Content Include="backstage\assets\css\lib\rangSlider\normalize.css" />
+    <Content Include="backstage\assets\css\lib\scrollable\scrollable.min.css" />
+    <Content Include="backstage\assets\css\lib\sidebar.css" />
+    <Content Include="backstage\assets\css\lib\sweetalert\sweetalert.css" />
+    <Content Include="backstage\assets\css\lib\themify-icons.css" />
+    <Content Include="backstage\assets\css\lib\toastr\toastr.min.css" />
+    <Content Include="backstage\assets\css\lib\vector-map\jqvmap.min.css" />
+    <Content Include="backstage\assets\css\style.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fa-brands.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fa-brands.min.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fa-regular.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fa-regular.min.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fa-solid.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fa-solid.min.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fontawesome-all.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fontawesome-all.min.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fontawesome.css" />
+    <Content Include="backstage\assets\fontAwesome\css\fontawesome.min.css" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-brands-400.svg" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-regular-400.svg" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-solid-900.svg" />
+    <Content Include="backstage\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="backstage\assets\fonts\fontawesome-webfont_files\viewsource.css" />
+    <Content Include="backstage\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="backstage\assets\fonts\MontserratLight.svg" />
+    <Content Include="backstage\assets\fonts\themify.svg" />
+    <Content Include="backstage\assets\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="backstage\assets\images\1.png" />
+    <Content Include="backstage\assets\images\avatar.png" />
+    <Content Include="backstage\assets\images\avatar\1.jpg" />
+    <Content Include="backstage\assets\images\avatar\2.jpg" />
+    <Content Include="backstage\assets\images\avatar\3.jpg" />
+    <Content Include="backstage\assets\images\avatar\usa-flag.png" />
+    <Content Include="backstage\assets\images\chat-person-add.png" />
+    <Content Include="backstage\assets\images\close.png" />
+    <Content Include="backstage\assets\images\fjords.jpg" />
+    <Content Include="backstage\assets\images\hand.jpg" />
+    <Content Include="backstage\assets\images\lights.jpg" />
+    <Content Include="backstage\assets\images\maximize.png" />
+    <Content Include="backstage\assets\images\minimize.png" />
+    <Content Include="backstage\assets\images\nature.jpg" />
+    <Content Include="backstage\assets\images\newyork.jpg" />
+    <Content Include="backstage\assets\images\paris.jpg" />
+    <Content Include="backstage\assets\images\paypal.png" />
+    <Content Include="backstage\assets\images\picture.png" />
+    <Content Include="backstage\assets\images\preview1.png" />
+    <Content Include="backstage\assets\images\rangeSliderimg\sprite-skin-flat.png" />
+    <Content Include="backstage\assets\images\rangeSliderimg\sprite-skin-modern.png" />
+    <Content Include="backstage\assets\images\rangeSliderimg\sprite-skin-nice.png" />
+    <Content Include="backstage\assets\images\rangeSliderimg\sprite-skin-simple.png" />
+    <Content Include="backstage\assets\images\sanfran.jpg" />
+    <Content Include="backstage\assets\images\smile.png" />
+    <Content Include="backstage\assets\images\user-1.png" />
+    <Content Include="backstage\assets\images\user-profile.jpg" />
+    <Content Include="backstage\assets\images\user.jpg" />
+    <Content Include="backstage\assets\images\video-cam.png" />
+    <Content Include="backstage\assets\js\lib\barRating\barRating.init.js" />
+    <Content Include="backstage\assets\js\lib\barRating\jquery.barrating.js" />
+    <Content Include="backstage\assets\js\lib\bootstrap.min.js" />
+    <Content Include="backstage\assets\js\lib\calendar-2\moment.latest.min.js" />
+    <Content Include="backstage\assets\js\lib\calendar-2\pignose.calendar.min.js" />
+    <Content Include="backstage\assets\js\lib\calendar-2\pignose.init.js" />
+    <Content Include="backstage\assets\js\lib\calendar-2\prism.min.js" />
+    <Content Include="backstage\assets\js\lib\calendar-2\semantic.ui.min.js" />
+    <Content Include="backstage\assets\js\lib\calendar\fullcalendar-init.js" />
+    <Content Include="backstage\assets\js\lib\calendar\fullcalendar.min.js" />
+    <Content Include="backstage\assets\js\lib\chart-js\Chart.bundle.js" />
+    <Content Include="backstage\assets\js\lib\chart-js\chartjs-init.js" />
+    <Content Include="backstage\assets\js\lib\chat-widget\chat-widget-init.js" />
+    <Content Include="backstage\assets\js\lib\data-table\buttons.colVis.min.js" />
+    <Content Include="backstage\assets\js\lib\data-table\buttons.flash.min.js" />
+    <Content Include="backstage\assets\js\lib\data-table\buttons.html5.min.js" />
+    <Content Include="backstage\assets\js\lib\data-table\buttons.print.min.js" />
+    <Content Include="backstage\assets\js\lib\data-table\datatables-init.js" />
+    <Content Include="backstage\assets\js\lib\data-table\dataTables.buttons.min.js" />
+    <Content Include="backstage\assets\js\lib\data-table\datatables.min.js" />
+    <Content Include="backstage\assets\js\lib\data-table\jquery-1.12.4.js" />
+    <Content Include="backstage\assets\js\lib\data-table\jquery.dataTables.min.js" />
+    <Content Include="backstage\assets\js\lib\data-table\jszip.min.js" />
+    <Content Include="backstage\assets\js\lib\data-table\pdfmake.min.js" />
+    <Content Include="backstage\assets\js\lib\data-table\vfs_fonts.js" />
+    <Content Include="backstage\assets\js\lib\datamap\d3.min.js" />
+    <Content Include="backstage\assets\js\lib\datamap\datamap-init.js" />
+    <Content Include="backstage\assets\js\lib\datamap\datamaps.world.min.js" />
+    <Content Include="backstage\assets\js\lib\datamap\topojson.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\curvedLines.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\excanvas.min.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\flot-chart-init.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\flot-tooltip\jquery.flot.tooltip.min.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\jquery.flot.categories.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\jquery.flot.crosshair.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\jquery.flot.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\jquery.flot.pie.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\jquery.flot.resize.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\jquery.flot.stack.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\jquery.flot.threshold.js" />
+    <Content Include="backstage\assets\js\lib\flot-chart\jquery.flot.time.js" />
+    <Content Include="backstage\assets\js\lib\flowtype.js" />
+    <Content Include="backstage\assets\js\lib\gmap\gmap.init.js" />
+    <Content Include="backstage\assets\js\lib\gmap\gmapApi.js" />
+    <Content Include="backstage\assets\js\lib\gmap\gmaps.js" />
+    <Content Include="backstage\assets\js\lib\invoice-edit.js" />
+    <Content Include="backstage\assets\js\lib\jquery-ui\jquery-ui.min.js" />
+    <Content Include="backstage\assets\js\lib\jquery-ui\jquery.ui.touch-punch.min.js" />
+    <Content Include="backstage\assets\js\lib\jquery.min.js" />
+    <Content Include="backstage\assets\js\lib\jquery.nanoscroller.min.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\db.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\fields\jsgrid.field.checkbox.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\fields\jsgrid.field.control.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\fields\jsgrid.field.number.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\fields\jsgrid.field.select.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\fields\jsgrid.field.text.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\fields\jsgrid.field.textarea.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\jsgrid-init.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\jsgrid.core.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\jsgrid.field.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\jsgrid.load-indicator.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\jsgrid.load-strategies.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\jsgrid.sort-strategies.js" />
+    <Content Include="backstage\assets\js\lib\jsgrid\jsgrid.validation.js" />
+    <Content Include="backstage\assets\js\lib\knob\jquery.knob.min.js" />
+    <Content Include="backstage\assets\js\lib\knob\knob.init.js" />
+    <Content Include="backstage\assets\js\lib\lobi-panel\lobipanel.js" />
+    <Content Include="backstage\assets\js\lib\mmc-chat.js" />
+    <Content Include="backstage\assets\js\lib\mmc-common.js" />
+    <Content Include="backstage\assets\js\lib\moment\moment.js" />
+    <Content Include="backstage\assets\js\lib\morris-chart\morris-init.js" />
+    <Content Include="backstage\assets\js\lib\morris-chart\morris.js" />
+    <Content Include="backstage\assets\js\lib\nestable\jquery.nestable.js" />
+    <Content Include="backstage\assets\js\lib\nestable\nestable.init.js" />
+    <Content Include="backstage\assets\js\lib\owl-carousel\owl.carousel-init.js" />
+    <Content Include="backstage\assets\js\lib\owl-carousel\owl.carousel.min.js" />
+    <Content Include="backstage\assets\js\lib\peitychart\jquery.peity.min.js" />
+    <Content Include="backstage\assets\js\lib\peitychart\peitychart.init.js" />
+    <Content Include="backstage\assets\js\lib\rangeSlider\ion.rangeSlider.min.js" />
+    <Content Include="backstage\assets\js\lib\rangeSlider\moment-with-locales.js" />
+    <Content Include="backstage\assets\js\lib\rangeSlider\moment.js" />
+    <Content Include="backstage\assets\js\lib\rangeSlider\rangeslider.init.js" />
+    <Content Include="backstage\assets\js\lib\rating1\jRate.init.js" />
+    <Content Include="backstage\assets\js\lib\rating1\jRate.min.js" />
+    <Content Include="backstage\assets\js\lib\scrollable\holder.js" />
+    <Content Include="backstage\assets\js\lib\scrollable\jquery-asScrollable.min.js" />
+    <Content Include="backstage\assets\js\lib\scrollable\jquery-asScrollbar.js" />
+    <Content Include="backstage\assets\js\lib\scrollable\scrollable.init.js" />
+    <Content Include="backstage\assets\js\lib\sidebar.js" />
+    <Content Include="backstage\assets\js\lib\sparklinechart\jquery.sparkline.min.js" />
+    <Content Include="backstage\assets\js\lib\sparklinechart\sparkline.init.js" />
+    <Content Include="backstage\assets\js\lib\sweetalert\sweetalert.init.js" />
+    <Content Include="backstage\assets\js\lib\sweetalert\sweetalert.min.js" />
+    <Content Include="backstage\assets\js\lib\toastr\toastr.init.js" />
+    <Content Include="backstage\assets\js\lib\toastr\toastr.min.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.algeria.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.argentina.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.brazil.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.europe.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.france.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.germany.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.greece.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.iran.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.iraq.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.russia.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.tunisia.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.turkey.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.usa.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\country\jquery.vmap.world.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\jquery.vmap.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\jquery.vmap.min.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\jquery.vmap.sampledata.js" />
+    <Content Include="backstage\assets\js\lib\vector-map\vector.init.js" />
+    <Content Include="backstage\assets\js\scripts.js" />
+    <Content Include="backstage\assets\lib\lobipanel\css\lobipanel.css" />
+    <Content Include="backstage\assets\lib\lobipanel\css\lobipanel.min.css" />
+    <Content Include="backstage\assets\lib\lobipanel\js\lobipanel.js" />
+    <Content Include="backstage\assets\lib\lobipanel\js\lobipanel.min.js" />
+    <Content Include="backstage\DeleteBlog.aspx" />
+    <Content Include="backstage\DeleteCode.aspx" />
+    <Content Include="backstage\EditBlog.aspx" />
+    <Content Include="backstage\EditCode.aspx" />
+    <Content Include="backstage\logo\logo.png" />
+    <Content Include="backstage\logo\logoSmall.png" />
+    <Content Include="backstage\logo\nixon-logo.png" />
+    <Content Include="backstage\index.aspx" />
+    <Content Include="backstage\ManagerBlog.aspx" />
+    <Content Include="backstage\ManagerCode.aspx" />
+    <Content Include="backstage\ueditorUTF8\dialogs\anchor\anchor.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\attachment.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\attachment.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\attachment.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\alignicon.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\bg.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\file-icons.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\icons.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\icons.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\image.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\progress.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\success.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\attachment\images\success.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\background\background.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\background\background.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\background\background.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\background\images\bg.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\background\images\success.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\chart.config.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\charts.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\charts.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\charts.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\images\charts0.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\images\charts1.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\images\charts2.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\images\charts3.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\images\charts4.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\charts\images\charts5.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\emotion.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\emotion.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\emotion.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\images\0.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\images\bface.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\images\cface.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\images\fface.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\images\tface.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\images\wface.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\emotion\images\yface.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\gmap\gmap.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\help\help.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\help\help.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\help\help.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\image.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\image.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\image.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\images\alignicon.jpg" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\images\bg.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\images\icons.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\images\icons.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\images\image.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\images\progress.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\images\success.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\image\images\success.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\insertframe\insertframe.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\internal.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\link\link.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\map\map.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\map\show.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\music\music.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\music\music.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\music\music.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\preview\preview.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\addimg.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\brush.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\delimg.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\empty.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\eraser.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\redo.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\redoH.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\scale.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\size.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\undo.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\images\undoH.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\scrawl.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\scrawl.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\scrawl\scrawl.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\spechars\spechars.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\spechars\spechars.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\table\dragicon.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\table\edittable.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\table\edittable.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\table\edittable.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\table\edittd.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\table\edittip.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\config.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\images\bg.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\images\pre0.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\images\pre1.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\images\pre2.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\images\pre3.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\images\pre4.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\template.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\template.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\template\template.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\bg.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\center_focus.jpg" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\file-icons.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\file-icons.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\icons.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\icons.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\image.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\left_focus.jpg" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\none_focus.jpg" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\progress.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\right_focus.jpg" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\success.gif" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\images\success.png" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\video.css" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\video.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\video\video.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\webapp\webapp.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="backstage\ueditorUTF8\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="backstage\ueditorUTF8\dialogs\wordimage\tangram.js" />
+    <Content Include="backstage\ueditorUTF8\dialogs\wordimage\wordimage.html" />
+    <Content Include="backstage\ueditorUTF8\dialogs\wordimage\wordimage.js" />
+    <Content Include="backstage\ueditorUTF8\index.html" />
+    <Content Include="backstage\ueditorUTF8\lang\en\en.js" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\addimage.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\background.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\button.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\copy.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\deletedisable.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\deleteenable.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\listbackground.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\localimage.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\music.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\rotateleftdisable.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\rotateleftenable.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\rotaterightdisable.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\rotaterightenable.png" />
+    <Content Include="backstage\ueditorUTF8\lang\en\images\upload.png" />
+    <Content Include="backstage\ueditorUTF8\lang\zh-cn\images\copy.png" />
+    <Content Include="backstage\ueditorUTF8\lang\zh-cn\images\localimage.png" />
+    <Content Include="backstage\ueditorUTF8\lang\zh-cn\images\music.png" />
+    <Content Include="backstage\ueditorUTF8\lang\zh-cn\images\upload.png" />
+    <Content Include="backstage\ueditorUTF8\lang\zh-cn\zh-cn.js" />
+    <Content Include="backstage\ueditorUTF8\net\Bin\Newtonsoft.Json.dll" />
+    <Content Include="backstage\ueditorUTF8\net\Bin\Newtonsoft.Json.pdb" />
+    <Content Include="backstage\ueditorUTF8\net\Bin\Newtonsoft.Json.xml" />
+    <Content Include="backstage\ueditorUTF8\net\net.sln" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520510786682821249211.png" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520518624591865234453.png" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520524156931508735259.png" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520524177038169206308.png" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520524221424196134314.png" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520530950639694514217.png" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520530961034414013450.png" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520530974026246741929.png" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520530989416422227070.png" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\default.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\css\ueditor.css" />
+    <Content Include="backstage\ueditorUTF8\themes\default\css\ueditor.min.css" />
+    <Content Include="backstage\ueditorUTF8\themes\default\dialogbase.css" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\anchor.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\arrow.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\arrow_down.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\arrow_up.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\button-bg.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\cancelbutton.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\charts.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\cursor_h.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\cursor_h.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\cursor_v.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\cursor_v.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\dialog-title-bg.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\filescan.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\highlighted.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\icons-all.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\icons.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\icons.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\loaderror.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\loading.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\lock.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\pagebreak.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\scale.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\sortable.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\spacer.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\sparator_v.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\table-cell-align.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\toolbar_bg.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\unhighlighted.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\upload.png" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\videologo.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\word.gif" />
+    <Content Include="backstage\ueditorUTF8\themes\default\images\wordpaste.png" />
+    <Content Include="backstage\ueditorUTF8\themes\iframe.css" />
+    <Content Include="backstage\ueditorUTF8\third-party\codemirror\codemirror.css" />
+    <Content Include="backstage\ueditorUTF8\third-party\codemirror\codemirror.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\highcharts-more.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\highcharts.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\highcharts.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\annotations.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\data.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\data.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\exporting.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\funnel.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\map.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\map.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\themes\gray.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\themes\grid.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\highcharts\themes\skies.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\jquery-1.10.2.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\jquery-1.10.2.min.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="backstage\ueditorUTF8\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="backstage\ueditorUTF8\third-party\video-js\font\vjs.svg" />
+    <Content Include="backstage\ueditorUTF8\third-party\video-js\video-js.css" />
+    <Content Include="backstage\ueditorUTF8\third-party\video-js\video-js.min.css" />
+    <Content Include="backstage\ueditorUTF8\third-party\video-js\video-js.swf" />
+    <Content Include="backstage\ueditorUTF8\third-party\video-js\video.dev.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\video-js\video.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\Uploader.swf" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.css" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.min.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="backstage\ueditorUTF8\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="backstage\ueditorUTF8\ueditor.all.js" />
+    <Content Include="backstage\ueditorUTF8\ueditor.all.min.js" />
+    <Content Include="backstage\ueditorUTF8\ueditor.config.js" />
+    <Content Include="backstage\ueditorUTF8\ueditor.parse.js" />
+    <Content Include="backstage\ueditorUTF8\ueditor.parse.min.js" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\2.jpg" />
+    <Content Include="img\3.jpg" />
+    <Content Include="LoginOut.aspx" />
+    <Content Include="onstage\blogContent.aspx" />
+    <Content Include="onstage\codeContent.aspx" />
+    <Content Include="onstage\css\append.css" />
+    <Content Include="login.css" />
     <Content Include="Global.asax" />
-    <Content Include="index.aspx" />
+    <Content Include="onstage\index.aspx" />
     <Content Include="login.aspx" />
     <Content Include="packages.config" />
-    <Content Include="font-awesome-4.5.0\fonts\fontawesome-webfont.eot" />
-    <Content Include="font-awesome-4.5.0\fonts\fontawesome-webfont.ttf" />
-    <Content Include="font-awesome-4.5.0\fonts\fontawesome-webfont.woff" />
-    <Content Include="font-awesome-4.5.0\fonts\fontawesome-webfont.woff2" />
-    <Content Include="font-awesome-4.5.0\fonts\FontAwesome.otf" />
-    <None Include="Properties\PublishProfiles\111.pubxml" />
+    <Content Include="onstage\font-awesome-4.5.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="onstage\font-awesome-4.5.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="onstage\font-awesome-4.5.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="onstage\font-awesome-4.5.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="onstage\font-awesome-4.5.0\fonts\FontAwesome.otf" />
+    <Content Include="backstage\Template.Master" />
+    <Content Include="backstage\assets\fontAwesome\scss\fa-brands.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\fa-regular.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\fa-solid.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\fontawesome.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_animated.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_bordered-pulled.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_core.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_fixed-width.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_icons.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_larger.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_list.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_mixins.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_rotated-flipped.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_screen-reader.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_stacked.scss" />
+    <Content Include="backstage\assets\fontAwesome\scss\_variables.scss" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-brands-400.eot" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-brands-400.woff" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-regular-400.eot" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-regular-400.woff" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-solid-900.eot" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-solid-900.woff" />
+    <Content Include="backstage\assets\fontAwesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="backstage\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="backstage\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="backstage\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="backstage\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="backstage\assets\fonts\FontAwesome.otf" />
+    <Content Include="backstage\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="backstage\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="backstage\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="backstage\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="backstage\assets\fonts\MontserratLight.eot" />
+    <Content Include="backstage\assets\fonts\MontserratLight.ttf" />
+    <Content Include="backstage\assets\fonts\MontserratLight.woff" />
+    <Content Include="backstage\assets\fonts\MontserratLight.woff2" />
+    <Content Include="backstage\assets\fonts\themify.eot" />
+    <Content Include="backstage\assets\fonts\themify.ttf" />
+    <Content Include="backstage\assets\fonts\themify.woff" />
+    <Content Include="backstage\assets\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="backstage\assets\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="backstage\assets\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="backstage\assets\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="backstage\ueditorUTF8\net\config.json" />
+    <Content Include="backstage\ueditorUTF8\net\controller.ashx" />
+    <Content Include="backstage\ueditorUTF8\net\README.md" />
+    <Content Include="backstage\ueditorUTF8\net\Web.config" />
+    <Content Include="backstage\ueditorUTF8\third-party\jquery-1.10.2.min.map" />
+    <Content Include="backstage\ueditorUTF8\third-party\video-js\font\vjs.eot" />
+    <Content Include="backstage\ueditorUTF8\third-party\video-js\font\vjs.ttf" />
+    <Content Include="backstage\ueditorUTF8\third-party\video-js\font\vjs.woff" />
+    <Content Include="Register.aspx" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520518684114453418355" />
+    <Content Include="backstage\ueditorUTF8\net\upload\image\20190604\6369520518690110682633508" />
+    <None Include="Properties\PublishProfiles\1.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -98,78 +658,150 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\bootstrap.min.css" />
-    <Content Include="css\hero-slider-style.css" />
-    <Content Include="css\magnific-popup.css" />
-    <Content Include="css\templatemo-style.css" />
+    <Content Include="onstage\css\bootstrap.min.css" />
+    <Content Include="onstage\css\hero-slider-style.css" />
+    <Content Include="onstage\css\magnific-popup.css" />
+    <Content Include="onstage\css\templatemo-style.css" />
     <Content Include="favicon.ico" />
-    <Content Include="font-awesome-4.5.0\css\font-awesome.min.css" />
-    <Content Include="font-awesome-4.5.0\fonts\fontawesome-webfont.svg" />
-    <Content Include="font-awesome-4.5.0\HELP-US-OUT.txt" />
-    <Content Include="img\tm-img-01-tn.jpg" />
-    <Content Include="img\tm-img-01.jpg" />
-    <Content Include="img\tm-img-02-tn.jpg" />
-    <Content Include="img\tm-img-02.jpg" />
-    <Content Include="img\tm-img-03-tn.jpg" />
-    <Content Include="img\tm-img-03.jpg" />
-    <Content Include="img\tm-img-04-tn.jpg" />
-    <Content Include="img\tm-img-04.jpg" />
-    <Content Include="img\tm-img-05-tn.jpg" />
-    <Content Include="img\tm-img-05.jpg" />
-    <Content Include="img\tm-img-06-tn.jpg" />
-    <Content Include="img\tm-img-06.jpg" />
-    <Content Include="img\tm-img-07-tn.jpg" />
-    <Content Include="img\tm-img-07.jpg" />
-    <Content Include="img\tm-img-08-tn.jpg" />
-    <Content Include="img\tm-img-08.jpg" />
-    <Content Include="img\tm-img-09-tn.jpg" />
-    <Content Include="img\tm-img-09.jpg" />
-    <Content Include="img\tm-img-10-tn.jpg" />
-    <Content Include="img\tm-img-10.jpg" />
-    <Content Include="img\tm-img-11-tn.jpg" />
-    <Content Include="img\tm-img-11.jpg" />
-    <Content Include="img\tm-img-12-tn.jpg" />
-    <Content Include="img\tm-img-12.jpg" />
-    <Content Include="img\tm-img-13-tn.jpg" />
-    <Content Include="img\tm-img-13.jpg" />
-    <Content Include="img\tm-img-14-tn.jpg" />
-    <Content Include="img\tm-img-14.jpg" />
-    <Content Include="img\tm-img-15-tn.jpg" />
-    <Content Include="img\tm-img-15.jpg" />
-    <Content Include="img\tm-img-16-tn.jpg" />
-    <Content Include="img\tm-img-16.jpg" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\hero-slider-main.js" />
-    <Content Include="js\jquery-1.11.3.min.js" />
-    <Content Include="js\jquery.magnific-popup.min.js" />
-    <Content Include="js\masonry.pkgd.min.js" />
-    <Content Include="js\tether.min.js" />
-    <Content Include="video\moving-cloud.mp4" />
-    <Content Include="video\night-light-blur.mp4" />
-    <Content Include="video\padaut-bee.mp4" />
-    <Content Include="video\red-flower.mp4" />
-    <Content Include="video\sunset-cloud.mp4" />
-    <Content Include="video\sunset-loop.mp4" />
+    <Content Include="onstage\font-awesome-4.5.0\css\font-awesome.min.css" />
+    <Content Include="onstage\font-awesome-4.5.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="onstage\font-awesome-4.5.0\HELP-US-OUT.txt" />
+    <Content Include="onstage\img\tm-img-01-tn.jpg" />
+    <Content Include="onstage\img\tm-img-01.jpg" />
+    <Content Include="onstage\img\tm-img-02-tn.jpg" />
+    <Content Include="onstage\img\tm-img-02.jpg" />
+    <Content Include="onstage\img\tm-img-03-tn.jpg" />
+    <Content Include="onstage\img\tm-img-03.jpg" />
+    <Content Include="onstage\img\tm-img-04-tn.jpg" />
+    <Content Include="onstage\img\tm-img-04.jpg" />
+    <Content Include="onstage\img\tm-img-05-tn.jpg" />
+    <Content Include="onstage\img\tm-img-05.jpg" />
+    <Content Include="onstage\img\tm-img-06-tn.jpg" />
+    <Content Include="onstage\img\tm-img-06.jpg" />
+    <Content Include="onstage\img\tm-img-07-tn.jpg" />
+    <Content Include="onstage\img\tm-img-07.jpg" />
+    <Content Include="onstage\img\tm-img-08-tn.jpg" />
+    <Content Include="onstage\img\tm-img-08.jpg" />
+    <Content Include="onstage\img\tm-img-09-tn.jpg" />
+    <Content Include="onstage\img\tm-img-09.jpg" />
+    <Content Include="onstage\img\tm-img-10-tn.jpg" />
+    <Content Include="onstage\img\tm-img-10.jpg" />
+    <Content Include="onstage\img\tm-img-11-tn.jpg" />
+    <Content Include="onstage\img\tm-img-11.jpg" />
+    <Content Include="onstage\img\tm-img-12-tn.jpg" />
+    <Content Include="onstage\img\tm-img-12.jpg" />
+    <Content Include="onstage\img\tm-img-13-tn.jpg" />
+    <Content Include="onstage\img\tm-img-13.jpg" />
+    <Content Include="onstage\img\tm-img-14-tn.jpg" />
+    <Content Include="onstage\img\tm-img-14.jpg" />
+    <Content Include="onstage\img\tm-img-15-tn.jpg" />
+    <Content Include="onstage\img\tm-img-15.jpg" />
+    <Content Include="onstage\img\tm-img-16-tn.jpg" />
+    <Content Include="onstage\img\tm-img-16.jpg" />
+    <Content Include="onstage\video\moving-cloud.mp4" />
+    <Content Include="onstage\video\night-light-blur.mp4" />
+    <Content Include="onstage\video\padaut-bee.mp4" />
+    <Content Include="onstage\video\red-flower.mp4" />
+    <Content Include="onstage\video\sunset-cloud.mp4" />
+    <Content Include="onstage\video\sunset-loop.mp4" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlogContent.aspx.cs">
-      <DependentUpon>BlogContent.aspx</DependentUpon>
+    <Compile Include="backstage\DeleteBlog.aspx.cs">
+      <DependentUpon>DeleteBlog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BlogContent.aspx.designer.cs">
-      <DependentUpon>BlogContent.aspx</DependentUpon>
+    <Compile Include="backstage\DeleteBlog.aspx.designer.cs">
+      <DependentUpon>DeleteBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\DeleteCode.aspx.cs">
+      <DependentUpon>DeleteCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\DeleteCode.aspx.designer.cs">
+      <DependentUpon>DeleteCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\EditBlog.aspx.cs">
+      <DependentUpon>EditBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\EditBlog.aspx.designer.cs">
+      <DependentUpon>EditBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\EditCode.aspx.cs">
+      <DependentUpon>EditCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\EditCode.aspx.designer.cs">
+      <DependentUpon>EditCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\ManagerBlog.aspx.cs">
+      <DependentUpon>ManagerBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\ManagerBlog.aspx.designer.cs">
+      <DependentUpon>ManagerBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\ManagerCode.aspx.cs">
+      <DependentUpon>ManagerCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\ManagerCode.aspx.designer.cs">
+      <DependentUpon>ManagerCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\Template.Master.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\Template.Master.designer.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\ueditorUTF8\net\App_Code\Config.cs" />
+    <Compile Include="backstage\ueditorUTF8\net\App_Code\ConfigHandler.cs" />
+    <Compile Include="backstage\ueditorUTF8\net\App_Code\CrawlerHandler.cs" />
+    <Compile Include="backstage\ueditorUTF8\net\App_Code\Handler.cs" />
+    <Compile Include="backstage\ueditorUTF8\net\App_Code\ListFileHandler.cs" />
+    <Compile Include="backstage\ueditorUTF8\net\App_Code\NotSupportedHandler.cs" />
+    <Compile Include="backstage\ueditorUTF8\net\App_Code\PathFormater.cs" />
+    <Compile Include="backstage\ueditorUTF8\net\App_Code\UploadHandler.cs" />
+    <Compile Include="LoginOut.aspx.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginOut.aspx.designer.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="onstage\blogContent.aspx.cs">
+      <DependentUpon>blogContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="onstage\blogContent.aspx.designer.cs">
+      <DependentUpon>blogContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="onstage\codeContent.aspx.cs">
+      <DependentUpon>codeContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="onstage\codeContent.aspx.designer.cs">
+      <DependentUpon>codeContent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
+    <Compile Include="onstage\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
+    <Compile Include="onstage\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
@@ -180,6 +812,16 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

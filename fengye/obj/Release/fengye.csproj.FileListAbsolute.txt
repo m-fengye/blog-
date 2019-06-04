@@ -1,3 +1,4 @@
+E:\Project\ASP.NET\fengye\fengye\obj\Release\fengye.csprojResolveAssemblyReference.cache
 E:\Project\ASP.NET\fengye\fengye\bin\roslyn\csc.exe
 E:\Project\ASP.NET\fengye\fengye\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 E:\Project\ASP.NET\fengye\fengye\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -13,6 +14,16 @@ E:\Project\ASP.NET\fengye\fengye\bin\roslyn\VBCSCompiler.exe.config
 E:\Project\ASP.NET\fengye\fengye\bin\fengye.dll.config
 E:\Project\ASP.NET\fengye\fengye\bin\fengye.dll
 E:\Project\ASP.NET\fengye\fengye\bin\fengye.pdb
-E:\Project\ASP.NET\fengye\fengye\obj\Release\fengye.csprojResolveAssemblyReference.cache
+E:\Project\ASP.NET\fengye\fengye\bin\BLL.dll
+E:\Project\ASP.NET\fengye\fengye\bin\Model.dll
+E:\Project\ASP.NET\fengye\fengye\bin\Newtonsoft.Json.dll
+E:\Project\ASP.NET\fengye\fengye\bin\DAL.dll
+E:\Project\ASP.NET\fengye\fengye\bin\BLL.pdb
+E:\Project\ASP.NET\fengye\fengye\bin\Model.pdb
+E:\Project\ASP.NET\fengye\fengye\bin\Newtonsoft.Json.pdb
+E:\Project\ASP.NET\fengye\fengye\bin\Newtonsoft.Json.xml
+E:\Project\ASP.NET\fengye\fengye\bin\DAL.pdb
 E:\Project\ASP.NET\fengye\fengye\obj\Release\fengye.dll
 E:\Project\ASP.NET\fengye\fengye\obj\Release\fengye.pdb
+E:\Project\ASP.NET\fengye\fengye\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project\ASP.NET\fengye\fengye\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml

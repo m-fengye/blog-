@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BLL
 {
-    class MD5Encryption
+    public class MD5Encryption
     {
         public static string MD5(string encryptString)
         {

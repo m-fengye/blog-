@@ -1,7 +1,7 @@
-E:\Project\ASP.NET\fengye\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\Project\ASP.NET\fengye\DAL\bin\Debug\DAL.dll
 E:\Project\ASP.NET\fengye\DAL\bin\Debug\DAL.pdb
 E:\Project\ASP.NET\fengye\DAL\bin\Debug\Model.dll
 E:\Project\ASP.NET\fengye\DAL\bin\Debug\Model.pdb
+E:\Project\ASP.NET\fengye\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\Project\ASP.NET\fengye\DAL\obj\Debug\DAL.dll
 E:\Project\ASP.NET\fengye\DAL\obj\Debug\DAL.pdb
